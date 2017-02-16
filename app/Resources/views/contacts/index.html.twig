@@ -1,0 +1,16 @@
+{%  extends 'base.html.twig' %}
+
+{% block title %} Contacts {% endblock %}
+
+{%  block body %}
+
+    {% for contact in contacts %}
+        {{ contact.id }}
+        {{ contact.name }}
+        {{ contact.address }}
+        {{ contact.country }}
+        {{ contact.city }}
+        {{ contact.category }}
+    {% endfor %}
+
+{% endblock %}

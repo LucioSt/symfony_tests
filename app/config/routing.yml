@@ -1,3 +1,19 @@
 app:
     resource: "@AppBundle/Controller/"
     type:     annotation
+
+contact_index:
+    path: /contacts/index
+    defaults: { _controller: AppBundle:Contacts:index }
+
+contact_new:
+    path: /contacts/new
+    defaults: { _controller: AppBundle:Contacts:new }
+
+contact_edit:
+    path: /contacts/edit/{contacts}
+    defaults: { _controller: AppBundle:Contacts:edit }
+
+contact_delete:
+    path: /contacts/delete/{contacts}
+    defaults: { _controller: AppBundle:Contacts:delete }
