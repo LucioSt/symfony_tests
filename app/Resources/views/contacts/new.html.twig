@@ -4,58 +4,59 @@
 
 {%  block body %}
 
+    <div id="main" class="container-fluid">
+        <h3 class="page-header">New Contact</h3>
+    </div>
 
-    <div class="row-fluid">
 
-        <div class="span12">
-            <div class="head clearfix">
-                <div class="isw-documents"></div>
-                <h1>Couple Creation</h1>
-            </div>
-            <div class="block-fluid">
+    {{ form_start(form) }}
 
-                {{ form_start(form) }}
 
-                <div class="row-form clearfix">
-                    <div class="span2">Name:</div>
-                    <div class="span5">{{ form_widget(form.name ) }}</div>
-                </div>
-                <div class="row-form clearfix">
-                    <div class="span2">Address:</div>
-                    <div class="span5">{{ form_widget(form.address ) }}</div>
-                </div>
-                <div class="row-form clearfix">
-                    <div class="span2">Country:</div>
-                    <div class="span5">{{ form_widget(form.country ) }}</div>
-                </div>
-                <div class="row-form clearfix">
-                    <div class="span2">City:</div>
-                    <div class="span5">{{ form_widget(form.city ) }}</div>
-                </div>
-                <div class="row-form clearfix">
-                    <div class="span2">Category:</div>
-                    <div class="span5">{{ form_widget(form.category ) }}</div>
-                </div>
-                <div class="row-form clearfix">
-                    <div class="span2">Date/Time:</div>
-                    <div class="span2">{{ form_widget(form.datetime ) }}</div>
-                </div>
+    <div class="row">
+        <div class="form-group col-md-4">
+            <label for="campo1">Name:</label>
+            {{ form_widget(form.name ) }}
+        </div>
 
-                {{ form_widget(form) }}
-                <div class="row-fluid">
-                    <div class="span10">
+        <div class="form-group col-md-4">
+            <label for="campo2">Address:</label>
+            {{ form_widget(form.address ) }}
+        </div>
 
-                    </div>
-                    <div class="span2">
-                        <button type="submit" class="btn btn-block">Create Contacts</button>
-                    </div>
-                </div>
-                {{ form_end(form) }}
-            </div>
+        <div class="form-group col-md-4">
+            <label for="campo3">Country:</label>
+            {{ form_widget(form.country ) }}
+        </div>
+        <div class="form-group col-md-4">
+            <label for="campo1">City:</label>
+            {{ form_widget(form.city ) }}
+        </div>
 
+        <div class="form-group col-md-4">
+            <label for="campo2">Category:</label>
+            {{ form_widget(form.category ) }}
+        </div>
+
+        <div class="form-group col-md-4">
+            <label for="campo3">Country:</label>
+            {{ form_widget(form.datetime ) }}
         </div>
 
     </div>
+
+
+    {{ form_widget(form) }}
+
+    <hr />
+    <div id="actions" class="row">
+        <div class="col-md-12">
+            <button type="submit" class="btn btn-primary">Salvar</button>
+            <a href="index.html" class="btn btn-default">Cancelar</a>
+        </div>
+    </div>
+
+    {{ form_end(form) }}
+
 
     <ul>
         <li>

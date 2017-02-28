@@ -1,0 +1,68 @@
+{%  extends 'base.html.twig' %}
+
+{% block title %} Contacts {% endblock %}
+
+{%  block body %}
+
+
+<div class="row-fluid">
+
+    <div class="span12">
+        <div class="head clearfix">
+            <div class="isw-documents"></div>
+            <h1>Couple Creation</h1>
+        </div>
+        <div class="block-fluid">
+
+            {{ form_start(form) }}
+
+            <div class="row-form clearfix">
+                <div class="span2">Name:</div>
+                <div class="span5">{{ form_widget(form.name ) }}</div>
+            </div>
+            <div class="row-form clearfix">
+                <div class="span2">Address:</div>
+                <div class="span5">{{ form_widget(form.address ) }}</div>
+            </div>
+            <div class="row-form clearfix">
+                <div class="span2">Country:</div>
+                <div class="span5">{{ form_widget(form.country ) }}</div>
+            </div>
+            <div class="row-form clearfix">
+                <div class="span2">City:</div>
+                <div class="span5">{{ form_widget(form.city ) }}</div>
+            </div>
+            <div class="row-form clearfix">
+                <div class="span2">Category:</div>
+                <div class="span5">{{ form_widget(form.category ) }}</div>
+            </div>
+            <div class="row-form clearfix">
+                <div class="span2">Date/Time:</div>
+                <div class="span2">{{ form_widget(form.datetime ) }}</div>
+            </div>
+
+            {{ form_widget(form) }}
+            <div class="row-fluid">
+                <div class="span10">
+
+                </div>
+                <div class="span2">
+                    <button type="submit" class="btn btn-block">Create Contacts</button>
+                </div>
+            </div>
+            {{ form_end(form) }}
+        </div>
+
+    </div>
+
+</div>
+
+<ul>
+    <li>
+        <a href="{{ path('contact_index') }}"><button class="btn btn-link" type="button">Back to the list</button></a>
+    </li>
+</ul>
+</div></div>
+
+
+{% endblock %}
