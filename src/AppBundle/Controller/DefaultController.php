@@ -21,7 +21,6 @@ class DefaultController extends Controller
     }
 
 
-
     /**
      * @Route("/about", name="about")
      */
@@ -29,6 +28,8 @@ class DefaultController extends Controller
     {
         return new Response("About page");
     }
+
+
 
 
 }

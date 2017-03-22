@@ -19,6 +19,8 @@ class CategoryController extends Controller
      *
      * @Route("/", name="category_index")
      * @Method("GET")
+     *
+     * Sample->Route("/blog/{page}", defaults={"page" = 1})
      */
     public function indexAction()
     {
