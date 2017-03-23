@@ -5,59 +5,69 @@
 {%  block body %}
 
 
-    <div class="row-fluid">
 
-        <div class="span12">
-            <div class="head clearfix">
-                <div class="isw-documents"></div>
-                <h1>Contact Edition</h1>
-            </div>
-            <div class="block-fluid">
-
-                {{ form_start(edit_form) }}
-
-                <div class="row-form clearfix">
-                    <div class="span2">Name:</div>
-                    <div class="span5">{{ form_widget(edit_form.name ) }}</div>
-                </div>
-                <div class="row-form clearfix">
-                    <div class="span2">Address:</div>
-                    <div class="span5">{{ form_widget(edit_form.address ) }}</div>
-                </div>
-                <div class="row-form clearfix">
-                    <div class="span2">Country:</div>
-                    <div class="span5">{{ form_widget(edit_form.country ) }}</div>
-                </div>
-                <div class="row-form clearfix">
-                    <div class="span2">City:</div>
-                    <div class="span5">{{ form_widget(edit_form.city ) }}</div>
-                </div>
-                <div class="row-form clearfix">
-                    <div class="span2">Category:</div>
-                    <div class="span5">{{ form_widget(edit_form.category ) }}</div>
-                </div>
-                <div class="row-form clearfix">
-                    <div class="span2">Date/Time:</div>
-                    <div class="span2">{{ form_widget(edit_form.datetime ) }}</div>
-                </div>
-
-                {{ form_widget(edit_form) }}
-                <div class="row-fluid">
-                    <div class="span10">
-
-                    </div>
-                    <div class="span2">
-                        <button type="submit" class="btn btn-block">Save Contact</button>
-                    </div>
-                </div>
-                {{ form_end(edit_form) }}
-            </div>
-
-        </div>
-
+    <div id="main" class="container-fluid">
+        <h3 class="page-header">Edit Contacts</h3>
     </div>
 
 
+    {{ form_start(edit_form, {'attr': {'class': 'form-horizontal'}}) }}
+
+
+
+    <form class="form-horizontal">
+        <div class="form-group">
+            <label for="inputEmail" class="control-label col-xs-2">Name:</label>
+            <div class="col-xs-6">
+                {{ form_widget(edit_form.name, {'attr': {'class': 'form-control'}} ) }}
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputPassword" class="control-label col-xs-2">Address</label>
+            <div class="col-xs-6">
+                {{ form_widget(edit_form.address, {'attr': {'class': 'form-control'}} ) }}
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputEmail" class="control-label col-xs-2">Country:</label>
+            <div class="col-xs-6">
+                {{ form_widget(edit_form.country, {'attr': {'class': 'form-control'}} ) }}
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputPassword" class="control-label col-xs-2">City</label>
+            <div class="col-xs-6">
+                {{ form_widget(edit_form.city, {'attr': {'class': 'form-control'}} ) }}
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputPassword" class="control-label col-xs-2">Category</label>
+            <div class="col-xs-6">
+                {{ form_widget(edit_form.category, {'attr': {'class': 'form-control'}} ) }}
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="inputPassword" class="control-label col-xs-2">Category</label>
+            <div class="col-xs-6">
+                {{ form_widget(edit_form.datetime, {'attr': {'class': 'form-control'}} ) }}
+            </div>
+        </div>
+
+        {{ form_widget(edit_form) }}
+
+        <div class="form-group">
+            <div class="col-xs-offset-2 col-xs-10">
+                <button type="submit" class="btn btn-primary">Salvar</button>
+                <a href="index.html" class="btn btn-default">Cancelar</a>
+
+
+            </div>
+        </div>
+    </form>
+
+
+    {{ form_end(edit_form) }}
 
 
     <ul>
@@ -66,12 +76,19 @@
         </li>
         <li>
             {{ form_start(delete_form) }}
-            <button type="submit" class="btn btn-block" value="DELETE">Delete Contact</button>
+            <button type="submit" class="btn btn-default" value="DELETE">Delete Contact</button>
             {{ form_end(delete_form) }}
         </li>
     </ul>
     </div></div>
 
 
-
 {% endblock %}
+
+
+
+
+
+
+
+

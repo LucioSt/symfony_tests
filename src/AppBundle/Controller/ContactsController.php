@@ -46,8 +46,15 @@ class ContactsController extends Controller
             $em->persist($contact);
             $em->flush();
 
-            //return $this->redirectToRoute('couple_show', array('couple' => $couple->getId()));
-            return new Response("Contact saved");
+            // Set successfully message
+            $request->getSession()
+                ->getFlashBag()
+                ->add('success', 'Contact saved successfully !')
+            ;
+
+            // Clean field and call form again
+            return $this->redirect($request->getUri());
+
         }
 
         return $this->render('contacts/new.html.twig', array(
@@ -71,8 +78,15 @@ class ContactsController extends Controller
             $em->persist($contacts);
             $em->flush();
 
-            //return $this->redirectToRoute('couple_edit', array('couple' => $couple->getId()));
-            return new Response("Contact saved");
+            // Set successfully message
+            $request->getSession()
+                ->getFlashBag()
+                ->add('success', 'Contact saved successfully !')
+            ;
+
+            // redirect to the "contact_index" route
+            return $this->redirectToRoute('contact_index');
+
         }
 
         return $this->render('contacts/edit.html.twig', array(
