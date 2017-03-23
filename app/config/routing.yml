@@ -6,6 +6,9 @@ contact_index:
     path: /contacts/index
     defaults: { _controller: AppBundle:Contacts:index }
 
+logout:
+    path: /logout
+
 contact_new:
     path: /contacts/new
     defaults: { _controller: AppBundle:Contacts:new }
@@ -14,9 +17,10 @@ contact_edit:
     path: /contacts/edit/{contacts}
     defaults: { _controller: AppBundle:Contacts:edit }
 
+# I used list to control delete come from listview
 contact_delete:
-    path: /contacts/delete/{contacts}
-    defaults: { _controller: AppBundle:Contacts:delete }
+    path: /contacts/delete/{contacts}/{list}
+    defaults: { _controller: AppBundle:Contacts:delete, list: 0 }
 
 fos_user_security:
     resource: "@FOSUserBundle/Resources/config/routing/security.xml"

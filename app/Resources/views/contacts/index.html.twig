@@ -34,7 +34,9 @@
                     <td>{{ contact.category }}</td>
                     <td class="actions">
                         <a class="btn btn-warning btn-xs" href="/contacts/edit/{{ contact.id }}">Editar</a>
-                        <a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#delete-modal">Excluir</a>
+                        <a class="btn btn-danger btn-xs"  href="/contacts/delete/{{ contact.id }}/1"
+                            data-toggle="modal" data-target="#delete-modal"
+                            onclick="return confirm('Do you want to delete this record ?')">Excluir</a>
                     </td>
                 </tr>
              {% endfor %}

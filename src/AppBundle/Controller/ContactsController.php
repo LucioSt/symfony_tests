@@ -108,20 +108,27 @@ class ContactsController extends Controller
      * Deletes a Contact entity.
      *
      */
-    public function deleteAction(Request $request, Contacts $contacts)
+    public function deleteAction(Request $request, Contacts $contacts, $list = 0)
     {
         $form = $this->createDeleteForm($contacts);
         $form->handleRequest($request);
 
         // It is only deleted if comes from deete bottom in Edit
-        if ($form->isSubmitted() && $form->isValid()) {
+        if ( ($form->isSubmitted() && $form->isValid()) or $list==1){
             $em = $this->getDoctrine()->getManager();
             $em->remove($contacts);
             $em->flush();
+
+            // Set successfully message
+            $request->getSession()
+                ->getFlashBag()
+                ->add('success', 'Contact deleted successfully !')
+            ;
+
         }
 
-        //return $this->redirectToRoute('couple_index');
-        return new Response("Contact deleted");
+        // redirect to the "contact_index" route
+        return $this->redirectToRoute('contact_index');
     }
 
 
