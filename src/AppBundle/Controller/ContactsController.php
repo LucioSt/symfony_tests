@@ -19,14 +19,22 @@ class ContactsController extends Controller
      * Lists all Contacts entities.
      *
      */
-    public function indexAction()
+    public function indexAction(Request $request)
     {
         $em = $this->getDoctrine()->getManager();
-
         $contacts = $em->getRepository('AppBundle:Contacts')->findAll();
 
+
+        $paginator = $this->get('knp_paginator');
+        $result = $paginator->paginate(
+            $contacts,
+            $request->query->getInt('page',1),
+            $request->query->getInt('limit',10)
+        );
+
+
         return $this->render('contacts/index.html.twig', array(
-            'contacts' => $contacts,
+            'contacts' => $result   ,
         ));
     }
 

@@ -33,7 +33,6 @@
                     <td>{{ contact.city }}</td>
                     <td>{{ contact.category }}</td>
                     <td class="actions">
-                        <a class="btn btn-success btn-xs" href="view.html">Visualizar</a>
                         <a class="btn btn-warning btn-xs" href="/contacts/edit/{{ contact.id }}">Editar</a>
                         <a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#delete-modal">Excluir</a>
                     </td>
@@ -49,19 +48,10 @@
 
     <!-- pagination -->
 
-    <div id="bottom" class="row">
-        <div class="col-md-12">
-
-            <ul class="pagination">
-                <li class="disabled"><a>&lt; Anterior</a></li>
-                <li class="disabled"><a>1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li class="next"><a href="#" rel="next">Próximo &gt;</a></li>
-            </ul><!-- /.pagination -->
-
-        </div>
-    </div> <!-- /#bottom -->
+    {# display navigation #}
+    <div class="navigation text-center">
+        {{ knp_pagination_render(contacts) }}
+    </div>
 
 
 
