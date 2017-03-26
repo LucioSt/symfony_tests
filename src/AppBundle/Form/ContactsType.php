@@ -33,10 +33,6 @@ class ContactsType extends AbstractType
                     'Female' => 'Female',
                     'Male' => 'Male',
                 )))
-            ->add('datetime', DateType::class, array(
-                'widget' => 'single_text',
-                'format' => 'yyyy-MM-dd',))
-
         ;
     }
 
