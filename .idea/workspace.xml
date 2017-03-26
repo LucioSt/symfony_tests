@@ -334,12 +334,12 @@
       <workItem from="1488298906333" duration="4613000" />
       <workItem from="1488380170111" duration="10184000" />
       <workItem from="1489159529766" duration="879000" />
-      <workItem from="1489443370019" duration="95006000" />
+      <workItem from="1489443370019" duration="95140000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="176701000" />
+    <option name="totallyTimeSpent" value="176835000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -855,8 +855,8 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="165">
-            <caret line="11" column="6" lean-forward="false" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+          <first_editor relative-caret-position="240">
+            <caret line="16" column="3" lean-forward="false" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
             <folding />
           </first_editor>
           <second_editor />

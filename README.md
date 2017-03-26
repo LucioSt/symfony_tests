@@ -14,7 +14,7 @@ A Symfony2/3 bundle to generate a CRUD (Create-Read-Update-Delete with a control
 - knplabs/knp-paginator-bundle - Pagination
 - doctrine/doctrine-fixtures-bundle - Fixture
 
-##Installation & Usage
+### Installation & Usage
 
 * run ``` composer install ```
 * run ``` php app/console doctrine:fixtures:load ```
