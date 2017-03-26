@@ -1,0 +1,60 @@
+{%  extends 'base.html.twig' %}
+
+{% block title %} Contacts {% endblock %}
+
+{%  block body %}
+
+
+    <!-- List  -->
+
+    <div id="list" class="row">
+
+        <div class="table-responsive col-md-12 ">
+            <table class="table table-striped" cellspacing="0" cellpadding="0">
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Address</th>
+                    <th>Country</th>
+                    <th>City</th>
+                    <th>Category</th>
+                    <th class="actions">Ações</th>
+                </tr>
+                </thead>
+                <tbody>
+
+             {% for contact in contacts %}
+                <tr>
+                    <td>{{ contact.id }}</td>
+                    <td>{{ contact.name }}</td>
+                    <td>{{ contact.address }}</td>
+                    <td>{{ contact.country }}</td>
+                    <td>{{ contact.city }}</td>
+                    <td>{{ contact.category }}</td>
+                    <td class="actions">
+                        <a class="btn btn-warning btn-xs" href="/contacts/edit/{{ contact.id }}">Editar</a>
+                        <a class="btn btn-danger btn-xs"  href="/contacts/delete/{{ contact.id }}/1"
+                            data-toggle="modal" data-target="#delete-modal"
+                            onclick="return confirm('Do you want to delete this record ?')">Excluir</a>
+                    </td>
+                </tr>
+             {% endfor %}
+
+                </tbody>
+            </table>
+
+        </div>
+    </div> <!-- /#list -->
+
+
+    <!-- pagination -->
+
+    {# display navigation #}
+    <div class="navigation text-center">
+        {{ knp_pagination_render(contacts) }}
+    </div>
+
+
+
+{% endblock %}
