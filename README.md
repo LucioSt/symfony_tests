@@ -11,6 +11,8 @@ A Symfony2/3 bundle to generate a CRUD (Create-Read-Update-Delete with a control
 - FOSUserBundle - Security
 - knplabs/knp-paginator-bundle - Pagination
 - doctrine/doctrine-fixtures-bundle - Fixture
+- Twig Template
+- Ajax
 
 ##Installation & Usage
 
