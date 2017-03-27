@@ -9,6 +9,7 @@ CRUD using PHP & Symfony2/3 for a simple Contact form.
 - Doctrine
 - Composer
 - Twig Template
+- Bootstrap
 - Ajax
 - FOSUserBundle - Security
 - knplabs/knp-paginator-bundle - Pagination
