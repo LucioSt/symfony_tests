@@ -1,7 +1,7 @@
 symfony_tests
 =============
 
-A Symfony2/3 bundle to generate a CRUD (Create-Read-Update-Delete with a controller, routes, views, form-type) for a simple Contact form.
+CRUD using PHP & Symfony2/3 for a simple Contact form.
 
 ### Were used:
 
@@ -16,8 +16,12 @@ A Symfony2/3 bundle to generate a CRUD (Create-Read-Update-Delete with a control
 
 ### Installation & Usage
 
-* run ``` composer install ```
+* Create a database in Mysqladmin
+* Follow the instructions from the link to install the composer in the app folder. Https://getcomposer.org/download/
+* run ``` php composer.phar install ```
+* run ``` php app/console doctrine:schema:update --force ``` 
 * run ``` php app/console doctrine:fixtures:load ```
+* run ``` php app/console server:run ``` 
 * User: ``` admin ``` password: ``` admin ```
 
 
