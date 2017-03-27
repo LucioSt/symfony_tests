@@ -16,6 +16,7 @@ class LoadContactData implements FixtureInterface
         $userAdmin->setCountry('Ireland');
         $userAdmin->setCity('Dublin');
         $userAdmin->setCategory(0);
+        $userAdmin->setDatetime(new \DateTime('now'));
 
         $manager->persist($userAdmin);
         $manager->flush();
@@ -27,6 +28,7 @@ class LoadContactData implements FixtureInterface
         $userAdmin->setCountry('Ireland');
         $userAdmin->setCity('Dublin');
         $userAdmin->setCategory(0);
+        $userAdmin->setDatetime(new \DateTime('now'));
 
         $manager->persist($userAdmin);
         $manager->flush();
