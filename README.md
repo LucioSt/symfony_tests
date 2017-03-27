@@ -17,7 +17,7 @@ CRUD using PHP & Symfony2/3 for a simple Contact form.
 ### Installation & Usage
 
 * Follow the instructions from the link to install the composer in the app folder. Https://getcomposer.org/download/
-* run ``` composer install ```
+* run ``` php composer.phar install ```
 * run ``` php app/console doctrine:fixtures:load ```
 * User: ``` admin ``` password: ``` admin ```
 
