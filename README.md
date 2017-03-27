@@ -1,7 +1,7 @@
 symfony_tests
 =============
 
-A Symfony2/3 bundle to generate a CRUD (Create-Read-Update-Delete with a controller, routes, views, form-type) for a simple Contact form.
+CRUD using PHP & Symfony2/3 for a simple Contact form.
 
 ### Were used:
 
