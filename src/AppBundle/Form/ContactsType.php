@@ -30,8 +30,8 @@ class ContactsType extends AbstractType
             ->add('city')
             ->add('category', ChoiceType::class, array(
                 'choices'  => array(
-                    'Female' => 'Female',
-                    'Male' => 'Male',
+                    1 => 'Female',
+                    2 => 'Male',
                 )))
         ;
     }

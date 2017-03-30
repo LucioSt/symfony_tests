@@ -31,7 +31,13 @@
                     <td>{{ contact.address }}</td>
                     <td>{{ contact.country }}</td>
                     <td>{{ contact.city }}</td>
-                    <td>{{ contact.category }}</td>
+                    <td>
+                        {% if contact.category == 1 %}
+                            Female
+                        {% else %}
+                            Male
+                        {% endif %}
+                    </td>
                     <td class="actions">
                         <a class="btn btn-warning btn-xs" href="/contacts/edit/{{ contact.id }}">Editar</a>
                         <a class="btn btn-danger btn-xs"  href="/contacts/delete/{{ contact.id }}/1"
