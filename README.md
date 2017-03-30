@@ -15,6 +15,8 @@ CRUD using PHP & Symfony2/3 for a simple Contact form.
 - knplabs/knp-paginator-bundle - Pagination
 - doctrine/doctrine-fixtures-bundle - Fixture
 
+- Deployed in Amazon AWS [http://http://ec2-34-253-121-209.eu-west-1.compute.amazonaws.com](http://http://ec2-34-253-121-209.eu-west-1.compute.amazonaws.com)  
+
 ### Installation & Usage
 
 * Create a database in Mysqladmin
